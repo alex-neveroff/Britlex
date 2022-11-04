@@ -12,6 +12,7 @@
   /* Backgrounds */
   --main-bcg: #ffffff;
   --item-bcg: #f5f5f5;
+  --price-bcg: #eeeeee;
   --button-border-color: #263238;
 }
 
@@ -151,26 +152,32 @@ p {
 
 /* Skills */
 
+.skills-cards {
+  gap: 30px;
+}
+
+.skils-item-speaking {
+  background-color: var(--item-bcg);
+  padding-left: 18px;
+  padding-bottom: 154px;
+}
+
 .skills-list {
   flex-wrap: wrap;
   gap: 30px;
-  align-items: flex-start;
-  justify-content: flex-end;
 }
 
 .skils-item {
   background-color: var(--item-bcg);
-  flex-basis: calc((100% - 60px) / 3);
+  flex-basis: calc((100% - 30px) / 2);
   padding-left: 18px;
   padding-bottom: 32px;
 }
 
-.skils-item:first-child {
-  padding-bottom: 154px;
-}
 .skils-item:last-child {
   flex-grow: 1;
   flex-direction: row-reverse;
+  justify-content: space-between;
 }
 
 .skills-title {
@@ -309,9 +316,10 @@ p {
 .pound-period {
   padding-left: 29px;
   align-items: flex-end;
+  gap: 30px;
+  background-color: var(--price-bcg);
 }
 .pounds {
-  margin-right: 30px;
   color: var(--menu-color);
   font-size: 24px;
   line-height: 1.5;
