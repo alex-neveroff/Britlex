@@ -332,7 +332,7 @@ p {
 
 .pound-period {
   display: flex;
-  align-items: flex-end;
+  align-items: baseline;
   align-self: flex-start;
 
   margin-top: auto;
