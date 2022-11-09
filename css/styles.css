@@ -56,10 +56,6 @@ p {
   padding-bottom: 180px;
 }
 
-.flex-part {
-  display: flex;
-}
-
 /* Header */
 
 .header {
@@ -67,7 +63,8 @@ p {
   padding-bottom: 55px;
 }
 
-.header .flex-part {
+.header-menu {
+  display: flex;
   align-items: center;
 }
 
@@ -84,6 +81,7 @@ p {
 }
 
 .menu {
+  display: flex;
   gap: 50px;
 }
 
@@ -114,6 +112,10 @@ p {
 }
 
 /* Hero */
+
+.hero {
+  display: flex;
+}
 .hero-title {
   margin-bottom: 40px;
 
@@ -153,6 +155,7 @@ p {
 /* Skills */
 
 .skills-cards {
+  display: flex;
   gap: 30px;
 }
 
@@ -163,6 +166,7 @@ p {
 }
 
 .skills-list {
+  display: flex;
   flex-wrap: wrap;
   gap: 30px;
 }
@@ -175,6 +179,7 @@ p {
 }
 
 .skils-item:last-child {
+  display: flex;
   flex-grow: 1;
   flex-direction: row-reverse;
   justify-content: space-between;
@@ -229,6 +234,9 @@ p {
 }
 
 /* About us*/
+.about-us {
+  display: flex;
+}
 
 .about-title {
   margin-bottom: 60px;
@@ -251,6 +259,7 @@ p {
 }
 
 .about-list {
+  display: flex;
   padding-left: 48px;
   padding-right: 48px;
   justify-content: space-between;
@@ -280,6 +289,8 @@ p {
 /* Pricing */
 
 .pricing-list {
+  display: flex;
+
   gap: 30px;
 }
 
@@ -296,6 +307,9 @@ p {
 
 .pricing-item {
   width: calc((100% 60px) / 3);
+
+  display: flex;
+  flex-direction: column;
 }
 
 .pricing-sub-title {
@@ -303,19 +317,28 @@ p {
   margin-bottom: 20px;
 
   color: var(--menu-color);
+
   font-weight: 600;
   font-size: 30px;
   line-height: 1.6;
 }
 
 .pricing-text {
+  margin-bottom: 30px;
+
   font-size: 20px;
   line-height: 1.5;
 }
 
 .pound-period {
-  padding-left: 29px;
+  display: flex;
   align-items: flex-end;
+  align-self: flex-start;
+
+  margin-top: auto;
+  padding-right: 22px;
+  padding-left: 29px;
+
   gap: 30px;
   background-color: var(--price-bcg);
 }
@@ -333,6 +356,10 @@ p {
 }
 
 /* Contacts */
+
+.contact-us {
+  display: flex;
+}
 
 .contact-img {
   margin-right: 144px;
@@ -392,11 +419,13 @@ p {
   padding-bottom: 55px;
 }
 
-.footer .flex-part {
+.footer-menu {
+  display: flex;
   align-items: center;
 }
 
 .footer-list {
+  display: flex;
   margin-left: auto;
   gap: 30px;
 }
