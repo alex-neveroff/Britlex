@@ -1,0 +1,66 @@
+.pricing-list {
+  display: flex;
+
+  gap: 30px;
+}
+
+.pricing-title {
+  margin-bottom: 60px;
+
+  color: var(--title-color);
+
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.pricing-item {
+  width: calc((100% - 60px) / 3);
+
+  display: flex;
+  flex-direction: column;
+}
+
+.pricing-sub-title {
+  margin-top: 30px;
+  margin-bottom: 20px;
+
+  color: var(--menu-color);
+
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 1.6;
+}
+
+.pricing-text {
+  margin-bottom: 30px;
+
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.pound-period {
+  display: flex;
+  align-items: baseline;
+  align-self: flex-start;
+
+  margin-top: auto;
+  padding-right: 22px;
+  padding-left: 29px;
+
+  gap: 30px;
+  background-color: var(--price-bcg);
+}
+.pounds {
+  color: var(--menu-color);
+  font-size: 24px;
+  line-height: 1.5;
+}
+
+.period {
+  color: var(--period-color);
+
+  font-size: 18px;
+  line-height: 1.5;
+}

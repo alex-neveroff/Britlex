@@ -1,0 +1,51 @@
+.about-us {
+  display: flex;
+}
+
+.about-title {
+  margin-bottom: 60px;
+
+  color: var(--title-color);
+
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 1.5;
+}
+.about-text {
+  margin-bottom: 30px;
+
+  font-size: 20px;
+  line-height: 1.8;
+}
+
+.about-info {
+  margin-right: 146px;
+}
+
+.about-list {
+  display: flex;
+  padding-left: 48px;
+  padding-right: 48px;
+  justify-content: space-between;
+}
+
+.about-item {
+  text-align: center;
+  justify-content: space-between;
+}
+
+.who {
+  max-width: 100px;
+  font-size: 20px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.numbers {
+  color: var(--numbers-color);
+
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 1.5;
+  text-align: center;
+}

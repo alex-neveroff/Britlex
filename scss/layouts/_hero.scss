@@ -1,0 +1,45 @@
+.hero {
+  @include desktop {
+    display: flex;
+  }
+}
+
+.hero::before {
+  content: "";
+  display: block;
+  width: 299px;
+  height: 299px;
+  background-image: url(../images/hero-learning-languages.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.hero__title {
+  margin-bottom: 20px;
+
+  color: var(--title-color);
+
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.5;
+  text-align: center;
+
+  @include desktop {
+    margin-bottom: 40px;
+
+    font-size: 64px;
+    line-height: 1.25;
+  }
+}
+.hero__text {
+  margin-bottom: 33px;
+
+  font-size: 14px;
+  line-height: 1.5;
+
+  @include desktop {
+    margin-bottom: 60px;
+
+    font-size: 24px;
+  }
+}

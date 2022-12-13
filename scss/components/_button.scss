@@ -1,0 +1,17 @@
+.button {
+  width: 289px;
+  height: 60px;
+  border: none;
+  border-radius: 10px;
+
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+
+  color: var(--button-color);
+  background-color: var(--button-border-color);
+
+  @include desktop {
+    font-size: 36px;
+  }
+}

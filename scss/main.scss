@@ -1,0 +1,15 @@
+@import "./utils/variables";
+@import "./utils/mixins";
+@import "./basic/reset";
+@import "./basic/general";
+@import "./basic/container";
+@import "./components/button";
+
+@import "./layouts/header";
+@import "./layouts/hero";
+@import "./layouts/skills";
+@import "./layouts/about-us";
+@import "./layouts/pricing";
+@import "./layouts/contact-us";
+
+@import "./layouts/footer";
