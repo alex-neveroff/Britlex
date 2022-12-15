@@ -1,0 +1,51 @@
+.mobile-menu {
+  position: fixed;
+  top: 100;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  padding-left: 15px;
+  padding-top: 20px;
+
+  background-color: var(--main-bcg);
+
+  transform: translateX(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &.is-open {
+    transform: translateX(0);
+  }
+
+  @include tablet {
+    padding-left: 35px;
+  }
+
+  @include laptop {
+    position: static;
+    transform: translateX(0);
+    display: flex;
+    align-items: center;
+    padding-left: 0;
+    padding-top: 0;
+  }
+}
+
+.mobile-menu__button {
+  width: 35px;
+  height: 35px;
+  background-image: url(../images/burger-menu.svg);
+  background-color: transparent;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: none;
+
+  @include laptop {
+    display: none;
+  }
+}
+
+.mobile-menu__icon {
+  fill: currentColor;
+}

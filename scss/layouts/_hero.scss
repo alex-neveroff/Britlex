@@ -1,41 +1,155 @@
 .hero {
-  @include desktop {
+  text-align: center;
+
+  @include tablet {
     display: flex;
+    flex-direction: row-reverse;
+    gap: 22px;
+
+    text-align: left;
+  }
+
+  @include laptop {
+    gap: 90px;
+  }
+  @include desktop {
+    gap: 140px;
   }
 }
 
 .hero::before {
   content: "";
-  display: block;
+  display: flex;
+  flex-shrink: 0;
   width: 299px;
   height: 299px;
+  margin-left: auto;
+  margin-right: auto;
+
   background-image: url(../images/hero-learning-languages.svg);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
+
+  @include smartphone {
+    width: 424px;
+    height: 424px;
+  }
+
+  @include tablet {
+    width: 352px;
+    height: 352px;
+  }
+
+  @include laptop {
+    width: 460px;
+    height: 460px;
+  }
+
+  @include desktop {
+    width: 654px;
+    height: 510px;
+  }
 }
-.hero__title {
+
+.hero__title-wrap {
   margin-bottom: 20px;
 
+  @include smartphone {
+    margin-bottom: 26px;
+  }
+  @include tablet {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 25px;
+  }
+
+  @include laptop {
+    margin-bottom: 27px;
+  }
+
+  @include desktop {
+    margin-bottom: 40px;
+  }
+}
+
+.hero__title-wrap::after {
+  @include tablet {
+    content: "";
+    display: flex;
+    flex-shrink: 0;
+    gap: 12px;
+
+    width: 51px;
+    height: 51px;
+
+    background-image: url(../images/hero-bulb-icon.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  @include laptop {
+    width: 59px;
+    height: 59px;
+  }
+
+  @include desktop {
+    width: 85px;
+    height: 85px;
+    gap: 35px;
+  }
+}
+
+.hero__title {
   color: var(--title-color);
 
   font-weight: 600;
   font-size: 24px;
   line-height: 1.5;
-  text-align: center;
+
+  @include smartphone {
+    font-size: 34px;
+    line-height: 1.32;
+  }
+  @include tablet {
+    flex-basis: calc(100% / 2);
+
+    font-size: 36px;
+    line-height: 1.25;
+  }
+
+  @include laptop {
+    font-size: 48px;
+    line-height: 1.33;
+  }
 
   @include desktop {
-    margin-bottom: 40px;
-
     font-size: 64px;
     line-height: 1.25;
   }
 }
+
 .hero__text {
   margin-bottom: 33px;
 
   font-size: 14px;
   line-height: 1.5;
+
+  @include smartphone {
+    margin-bottom: 37px;
+
+    font-size: 16px;
+  }
+
+  @include tablet {
+    margin-bottom: 32px;
+  }
+
+  @include laptop {
+    margin-bottom: 33px;
+
+    font-size: 20px;
+  }
 
   @include desktop {
     margin-bottom: 60px;

@@ -16,6 +16,12 @@
   }
 }
 
+@mixin toTablet {
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+}
+
 @mixin laptop {
   @media screen and (min-width: 992px) {
     @content;
@@ -23,7 +29,7 @@
 }
 
 @mixin desktop {
-  @media screen and (min-width: 1366px) {
+  @media screen and (min-width: 1378px) {
     @content;
   }
 }

@@ -1,15 +1,19 @@
 @import "./utils/variables";
 @import "./utils/mixins";
+
 @import "./basic/reset";
 @import "./basic/general";
 @import "./basic/container";
+
 @import "./components/button";
+@import "./components/logo";
+@import "./components/navigation";
 
 @import "./layouts/header";
+@import "./layouts/mobile-menu";
 @import "./layouts/hero";
 @import "./layouts/skills";
 @import "./layouts/about-us";
 @import "./layouts/pricing";
 @import "./layouts/contact-us";
-
 @import "./layouts/footer";

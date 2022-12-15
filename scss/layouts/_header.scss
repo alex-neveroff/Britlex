@@ -1,52 +1,29 @@
 .header {
-  padding-top: 55px;
-  padding-bottom: 55px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  @include desktop {
+    padding-top: 55px;
+    padding-bottom: 55px;
+  }
 }
 
-.header-menu {
+.header__menu {
+  @include laptop {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.header__mobile {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-}
 
-.logo {
-  margin-right: 236px;
-
-  color: var(--logo-color);
-  font-size: 36px;
-  line-height: 1.5;
-}
-
-.logo-black {
-  color: var(--title-color);
-}
-
-.menu {
-  display: flex;
-  gap: 50px;
-}
-
-.menu-link {
-  color: var(--menu-color);
-
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.5;
-}
-
-.header-button {
-  margin-left: auto;
-  padding: 20px 109px;
-
-  color: var(--title-color);
-  background-color: var(--main-bcg);
-
-  font-size: 20px;
-  line-height: 1.5;
-  text-align: center;
-  letter-spacing: 0.03em;
-
-  border: 2px solid var(--button-border-color);
-  border-radius: 10px;
-
-  cursor: pointer;
+  @include laptop {
+    margin-right: 167px;
+  }
+  @include desktop {
+    margin-right: 236px;
+  }
 }
