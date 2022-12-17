@@ -1,0 +1,55 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+
+  @include smartphone {
+    flex-direction: row;
+    gap: 6px;
+  }
+
+  @include laptop {
+    gap: 14px;
+  }
+
+  @include desktop {
+    gap: 30px;
+  }
+}
+
+.form__input {
+  height: 60px;
+  max-width: 425px;
+  width: 100%;
+  padding-left: 40px;
+
+  font-size: 12px;
+  line-height: 1.5;
+
+  color: var(--main-color);
+  border: 1px solid var(--main-color);
+  border-radius: 10px;
+
+  @include mobile {
+    width: 290px;
+  }
+
+  @include smartphone {
+    width: 100%;
+    font-size: 13px;
+  }
+
+  @include laptop {
+    font-size: 14px;
+  }
+
+  @include desktop {
+    font-size: 16px;
+  }
+
+  &:focus {
+    border-color: var(--button-border-color);
+    outline: 1px solid var(--button-border-color);
+  }
+}

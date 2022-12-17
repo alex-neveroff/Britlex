@@ -1,66 +1,259 @@
-.pricing-list {
+.pricing__list {
   display: flex;
+  flex-direction: column;
+  gap: 60px;
 
-  gap: 30px;
+  @include smartphone {
+    gap: 70px;
+  }
+  @include toTablet {
+    align-items: center;
+  }
+
+  @include tablet {
+    flex-direction: row;
+    gap: 30px;
+  }
+
+  @include laptop {
+    gap: 50px;
+  }
 }
 
-.pricing-title {
-  margin-bottom: 60px;
+.pricing__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  text-align: center;
+
+  @include smartphone {
+    width: 75%;
+  }
+
+  @include tablet {
+    width: calc((100% - 60px) / 3);
+    align-items: flex-start;
+    gap: 20px;
+    text-align: left;
+  }
+
+  @include laptop {
+    width: calc((100% - 100px) / 3);
+  }
+}
+
+.pricing__item::before {
+  content: "";
+  display: block;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.pricing__item:nth-child(1)::before {
+  width: 248px;
+  height: 248px;
+  background-image: url(../images/pricing-online.svg);
+  @include smartphone {
+    width: 291px;
+    height: 291px;
+  }
+
+  @include tablet {
+    width: 214px;
+    height: 214px;
+  }
+
+  @include laptop {
+    width: 222px;
+    height: 222px;
+  }
+
+  @include desktop {
+    width: 426px;
+    height: 320px;
+  }
+}
+.pricing__item:nth-child(2)::before {
+  width: 257px;
+  height: 197px;
+  background-image: url(../images/pricing-lesson.svg);
+
+  @include smartphone {
+    width: 314px;
+    height: 241px;
+  }
+
+  @include tablet {
+    width: 219px;
+    height: 214px;
+  }
+
+  @include laptop {
+    width: 267px;
+    height: 195px;
+  }
+
+  @include desktop {
+    width: 426px;
+    height: 320px;
+  }
+}
+.pricing__item:nth-child(3)::before {
+  width: 241px;
+  height: 241px;
+  background-image: url(../images/pricing-webinar.svg);
+  @include smartphone {
+    width: 253px;
+    height: 253px;
+  }
+
+  @include tablet {
+    width: 214px;
+    height: 214px;
+  }
+
+  @include laptop {
+    width: 242px;
+    height: 242px;
+  }
+
+  @include desktop {
+    width: 426px;
+    height: 320px;
+  }
+}
+
+.pricing__title {
+  margin-bottom: 70px;
 
   color: var(--title-color);
 
   font-weight: 600;
-  font-size: 48px;
+  font-size: 24px;
   line-height: 1.5;
   text-align: center;
+
+  @include smartphone {
+    font-size: 30px;
+  }
+
+  @include laptop {
+    font-size: 36px;
+  }
+
+  @include desktop {
+    font-size: 48px;
+  }
 }
 
-.pricing-item {
-  width: calc((100% - 60px) / 3);
-
-  display: flex;
-  flex-direction: column;
-}
-
-.pricing-sub-title {
-  margin-top: 30px;
-  margin-bottom: 20px;
-
+.pricing__label {
   color: var(--menu-color);
 
   font-weight: 600;
-  font-size: 30px;
-  line-height: 1.6;
-}
-
-.pricing-text {
-  margin-bottom: 30px;
-
-  font-size: 20px;
-  line-height: 1.5;
-}
-
-.pound-period {
-  display: flex;
-  align-items: baseline;
-  align-self: flex-start;
-
-  margin-top: auto;
-  padding-right: 22px;
-  padding-left: 29px;
-
-  gap: 30px;
-  background-color: var(--price-bcg);
-}
-.pounds {
-  color: var(--menu-color);
-  font-size: 24px;
-  line-height: 1.5;
-}
-
-.period {
-  color: var(--period-color);
-
   font-size: 18px;
   line-height: 1.5;
+
+  @include smartphone {
+    font-size: 20px;
+  }
+
+  @include tablet {
+    font-size: 20px;
+  }
+
+  @include laptop {
+    font-size: 22px;
+  }
+
+  @include desktop {
+    font-size: 30px;
+  }
+}
+
+.pricing__text {
+  margin-bottom: 8px;
+
+  font-size: 13px;
+  line-height: 1.5;
+
+  @include smartphone {
+    font-size: 14px;
+  }
+  @include tablet {
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+
+  @include laptop {
+    font-size: 16px;
+  }
+
+  @include desktop {
+    font-size: 20px;
+  }
+}
+
+.pricing__value {
+  display: flex;
+  gap: 6px;
+
+  margin-top: auto;
+  padding: 5px 12px;
+
+  background-color: var(--price-bcg);
+
+  @include smartphone {
+    gap: 12px;
+    padding: 8px 18px;
+  }
+
+  @include laptop {
+    gap: 12px;
+    padding: 10px 18px;
+  }
+
+  @include desktop {
+    gap: 30px;
+    padding: 12px 35px;
+  }
+}
+.pricing__pounds {
+  display: flex;
+  align-items: center;
+
+  color: var(--menu-color);
+  font-size: 18px;
+  line-height: 1.5;
+  @include smartphone {
+    font-size: 24px;
+  }
+
+  @include tablet {
+    font-size: 22px;
+  }
+
+  @include laptop {
+    font-size: 24px;
+  }
+}
+
+.pricing__period {
+  display: flex;
+  align-items: center;
+
+  color: var(--period-color);
+
+  font-size: 14px;
+  line-height: 1.5;
+
+  @include smartphone {
+    font-size: 16px;
+  }
+
+  @include desktop {
+    font-size: 18px;
+  }
 }

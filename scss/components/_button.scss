@@ -1,7 +1,8 @@
 .button {
   margin-left: auto;
   margin-right: auto;
-  width: 289px;
+
+  width: 100%;
   height: 60px;
 
   border: none;
@@ -14,6 +15,9 @@
   color: var(--button-color);
   background-color: var(--button-border-color);
 
+  @include mobile {
+    width: 290px;
+  }
   @include smartphone {
     width: 305px;
     height: 75px;
@@ -39,10 +43,37 @@
   }
 }
 
+.button--form {
+  @include smartphone {
+    margin-right: 0;
+    margin-left: 0;
+    width: 193px;
+    height: 60px;
+    font-size: 16px;
+  }
+
+  @include tablet {
+    width: 145px;
+    height: 60px;
+    font-size: 13px;
+  }
+
+  @include laptop {
+    width: 193px;
+    height: 60px;
+    font-size: 24px;
+  }
+
+  @include desktop {
+    width: 312px;
+    height: 70px;
+    font-size: 20px;
+  }
+}
+
 .button--header {
   margin-left: 0;
-
-  width: 160px;
+  width: 100%;
   height: 50px;
 
   font-size: 18px;
@@ -50,6 +81,10 @@
   color: var(--title-color);
   background-color: var(--main-bcg);
   border: 2px solid var(--button-border-color);
+
+  @include mobile {
+    width: 160px;
+  }
 
   @include laptop {
     margin-left: auto;
@@ -65,10 +100,14 @@
 }
 
 .button--skills {
-  width: 178px;
+  font-size: 14px;
+
+  width: 100%;
   height: 50px;
 
-  font-size: 14px;
+  @include mobile {
+    width: 178px;
+  }
 
   @include smartphone {
     margin-top: auto;

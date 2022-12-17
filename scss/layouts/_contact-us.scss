@@ -1,55 +1,129 @@
 .contact-us {
   display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  @include tablet {
+    flex-direction: row;
+    gap: 30px;
+    justify-content: space-between;
+    text-align: left;
+  }
+
+  @include laptop {
+    gap: 38px;
+  }
+
+  @include desktop {
+    gap: 38px;
+  }
 }
 
-.contact-img {
-  margin-right: 144px;
+.contact-us__title::after {
+  content: "";
+  display: flex;
+  flex-shrink: 0;
+  width: 253px;
+  height: 228px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 60px;
+
+  background-image: url(../images/contact.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+
+  @include smartphone {
+    width: 358px;
+    height: 332px;
+  }
+
+  @include tablet {
+    display: none;
+  }
 }
 
-.contacts-title {
+.contact-us::before {
+  @include tablet {
+    content: "";
+    display: flex;
+    flex-shrink: 0;
+    width: 233px;
+    height: 210px;
+    margin-left: auto;
+    margin-right: auto;
+
+    background-image: url(../images/contact.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+
+  @include laptop {
+    width: 312px;
+    height: 281px;
+  }
+
+  @include desktop {
+    width: 425px;
+    height: 430px;
+  }
+}
+
+.contact-us_wrap {
+  display: flex;
+  flex-direction: column;
+  @include tablet {
+    justify-content: space-around;
+  }
+}
+
+.contact-us__title {
   margin-bottom: 60px;
 
   color: var(--title-color);
   font-weight: 600;
-  font-size: 48px;
+  font-size: 24px;
   line-height: 1.5;
+
+  @include smartphone {
+    font-size: 30px;
+  }
+
+  @include tablet {
+    margin-bottom: 0;
+  }
+
+  @include laptop {
+    font-size: 36px;
+  }
+
+  @include desktop {
+    font-size: 48px;
+  }
 }
-.contacts-text {
+.contact-us__text {
   margin-bottom: 30px;
 
-  width: 654px;
-
-  font-size: 20px;
+  font-size: 14px;
   line-height: 1.5;
-}
-.form-input-text {
-  margin-right: 30px;
-  padding-top: 20px;
 
-  padding-bottom: 20px;
-  padding-left: 30px;
+  @include smartphone {
+    margin-bottom: 60px;
+    font-size: 16px;
+  }
 
-  font-size: 16px;
-  line-height: 1.875;
+  @include tablet {
+    margin-bottom: 0;
+    font-size: 14px;
+  }
 
-  border: 1px solid var(--main-color);
-  border-radius: 10px;
-}
+  @include laptop {
+    font-size: 16px;
+  }
 
-.contacts-button {
-  margin-left: auto;
-  padding: 20px 103px;
-
-  color: var(--button-color);
-  background-color: var(--button-border-color);
-
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.5;
-  letter-spacing: 0.03em;
-  text-align: center;
-
-  border-radius: 10px;
-
-  cursor: pointer;
+  @include desktop {
+    font-size: 20px;
+  }
 }
