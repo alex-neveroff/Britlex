@@ -435,7 +435,7 @@ body {
 
 .mobile-menu {
   position: fixed;
-  top: 100;
+  top: 100px;
   left: 0;
   z-index: 2;
   width: 100%;
@@ -443,20 +443,24 @@ body {
   padding-left: 15px;
   padding-top: 20px;
   background-color: var(--main-bcg);
-  -webkit-transform: translateX(100%);
-          transform: translateX(100%);
+  -webkit-transform: translateX(30%);
+          transform: translateX(30%);
   -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.mobile-menu.is-open {
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
+@media screen and (min-width: 575px) {
+  .mobile-menu {
+    -webkit-transform: translateX(50%);
+            transform: translateX(50%);
+  }
 }
 @media screen and (min-width: 768px) {
   .mobile-menu {
     padding-left: 35px;
+    -webkit-transform: translateX(60%);
+            transform: translateX(60%);
   }
 }
 @media screen and (min-width: 992px) {
@@ -473,6 +477,27 @@ body {
     padding-left: 0;
     padding-top: 0;
   }
+}
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+@media screen and (min-width: 992px) {
+  .is-hidden {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+  }
+}
+.is-hidden .mobile-menu {
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+
+.no-scroll {
+  overflow: hidden;
 }
 
 .mobile-menu__button {

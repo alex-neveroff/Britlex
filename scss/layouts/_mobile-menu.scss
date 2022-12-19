@@ -1,6 +1,6 @@
 .mobile-menu {
   position: fixed;
-  top: 100;
+  top: 100px;
   left: 0;
   z-index: 2;
   width: 100%;
@@ -10,15 +10,16 @@
 
   background-color: var(--main-bcg);
 
-  transform: translateX(100%);
+  transform: translateX(30%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-  &.is-open {
-    transform: translateX(0);
+  @include smartphone {
+    transform: translateX(50%);
   }
 
   @include tablet {
     padding-left: 35px;
+    transform: translateX(60%);
   }
 
   @include laptop {
@@ -29,6 +30,26 @@
     padding-left: 0;
     padding-top: 0;
   }
+}
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  @include laptop {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+  }
+
+  & .mobile-menu {
+    transform: translateX(100%);
+  }
+}
+
+.no-scroll {
+  overflow: hidden;
 }
 
 .mobile-menu__button {
