@@ -499,6 +499,11 @@ body {
 .no-scroll {
   overflow: hidden;
 }
+@media screen and (min-width: 992px) {
+  .no-scroll {
+    overflow: scroll;
+  }
+}
 
 .mobile-menu__button {
   width: 35px;

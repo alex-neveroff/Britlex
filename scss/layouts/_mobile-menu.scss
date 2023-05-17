@@ -50,6 +50,9 @@
 
 .no-scroll {
   overflow: hidden;
+  @include laptop {
+    overflow: scroll;
+  }
 }
 
 .mobile-menu__button {
